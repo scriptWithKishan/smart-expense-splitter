@@ -46,10 +46,11 @@ cd backend
 # Install dependencies
 npm install express mongoose cors dotenv
 
-
-# Edit .env and add your MongoDB Atlas URI
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/smart-expense-splitter?retryWrites=true&w=majority
+# Create a .env file in the backend directory
+# Add the following variables:
 # PORT=3000
+# MONGO_URI=your_mongodb_connection_string
+# JWT_SECRET=your_secret_key
 
 # Start the development server
 npm run dev
@@ -64,6 +65,10 @@ cd frontend
 
 # Install dependencies
 npm install 
+
+# Create a .env file in the frontend directory
+# Add the following variable:
+# VITE_API_URL=http://localhost:3000/api
 
 # Start the development server
 npm run dev
