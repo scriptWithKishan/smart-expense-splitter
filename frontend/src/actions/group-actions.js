@@ -44,3 +44,21 @@ export const deleteGroup = async (id) => {
     throw error.response?.data?.message || "Failed to delete group";
   }
 }
+
+export const fetchGroupBalances = async (id) => {
+  try {
+    const response = await api.get(`/groups/${id}/balances`);
+    return response.data;
+  } catch (error) {
+    throw error.response?.data?.message || "Failed to fetch balances";
+  }
+}
+
+export const fetchGroupActivity = async (id) => {
+  try {
+    const response = await api.get(`/groups/${id}/activity`);
+    return response.data;
+  } catch (error) {
+    throw error.response?.data?.message || "Failed to fetch activity";
+  }
+}

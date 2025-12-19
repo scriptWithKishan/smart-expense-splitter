@@ -11,7 +11,7 @@ export const sendMessage = async (data) => {
 
 export const getMessages = async (groupId) => {
   try {
-    const response = await api.get(`/messages/group/${groupId}`);
+    const response = await api.get(`/messages/${groupId}`);
     return response.data;
   } catch (error) {
     throw error.response?.data?.message || "Failed to fetch messages";
